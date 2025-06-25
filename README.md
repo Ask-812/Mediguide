@@ -1,6 +1,9 @@
 # Mediguide: AI-Assisted Medical Chatbot
 
+[Live Demo](https://mediguidebot.streamlit.app/) | [HuggingFace Model](https://huggingface.co/Ask-812/mediguide-gpt2-peft-lora)
+
 ## Project Highlights
+
 - **Conversational AI**: Answers medical questions with guideline-based, professional responses and disclaimers.
 - **Modern NLP**: Fine-tunes GPT-2 using PEFT (LoRA) for efficient, resource-friendly training.
 - **Evaluation**: Reports ROUGE-L (0.0736) and Perplexity (20.40) on a real medical Q&A dataset.
@@ -22,7 +25,7 @@ Mediguide is a conversational AI system designed to provide preliminary, guideli
 ## Project Structure
 
 - `data/` — Datasets (anonymized)
-- `models/` — Model checkpoints and configs
+- `models/` — Model checkpoints and configs (not included in repo; see HuggingFace link above)
 - `scripts/` — Training, fine-tuning, and inference scripts
 - `evaluation/` — Evaluation scripts and metrics
 - `reporting/` — PDF report generation
@@ -46,11 +49,12 @@ Mediguide is a conversational AI system designed to provide preliminary, guideli
 - Run evaluation scripts in `evaluation/`.
 - Generate the PDF report using scripts in `reporting/`.
 - Run the web app:
-   ```cmd
-   streamlit run scripts/web_chatbot.py
-   ```
+  ```cmd
+  streamlit run scripts/web_chatbot.py
+  ```
 
 ## Sample Output
+
 **Q:** What is glaucoma?
 
 **A:** Glaucoma is a group of diseases that can damage the eye's optic nerve and result in vision loss and blindness. ...
@@ -58,15 +62,18 @@ Mediguide is a conversational AI system designed to provide preliminary, guideli
 **Disclaimer:** This response is for informational purposes only and does not replace professional medical advice.
 
 ## Deployment
-- The chatbot can be deployed as a web app (Streamlit) or as an API (FastAPI) for integration with other systems.
+
+- The chatbot can be deployed as a web app ([Streamlit Live Demo](https://mediguidebot.streamlit.app/)) or as an API (FastAPI) for integration with other systems.
 - For production, consider using a GPU-enabled cloud service for faster inference.
 
 ## Results Table
-| Fine-Tuning Method | ROUGE-L | Perplexity | Model Size | Notes |
-|--------------------|---------|------------|------------|-------|
+
+| Fine-Tuning Method | ROUGE-L | Perplexity | Model Size | Notes                        |
+| ------------------ | ------- | ---------- | ---------- | ---------------------------- |
 | LoRA/PEFT (GPT-2)  | 0.0736  | 20.40      | ~500MB     | Efficient, resource-friendly |
 
 ## Summary
+
 Mediguide demonstrates a full ML pipeline: data cleaning, efficient fine-tuning, robust evaluation, and a user-friendly web demo. It is ready for portfolio, academic, or professional use.
 
 ## Disclaimer
