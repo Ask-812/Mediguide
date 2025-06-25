@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Data
+*.csv
+*.json
+
+# Model checkpoints and outputs
+models/
+checkpoints/
+*.pt
+*.bin
+*.safetensors
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Streamlit cache
+.streamlit/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PDF reports
+*.pdf
+
+# Logs
+*.log
+
+# Ignore user secrets
+secrets.env
