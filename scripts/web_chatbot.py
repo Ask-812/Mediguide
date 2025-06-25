@@ -37,9 +37,9 @@ Enter your medical question below. This tool provides guideline-based, professio
 
 @st.cache_resource
 def load_model():
-    model_dir = "models/gpt2-peft-lora"
-    tokenizer = AutoTokenizer.from_pretrained(model_dir)
-    model = AutoModelForCausalLM.from_pretrained(model_dir)
+    model_id = "Ask-812/mediguide-gpt2-peft-lora"
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    model = AutoModelForCausalLM.from_pretrained(model_id)
     model.eval()
     return tokenizer, model
 

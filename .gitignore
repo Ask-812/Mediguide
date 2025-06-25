@@ -43,3 +43,6 @@ Thumbs.db
 
 # Ignore user secrets
 secrets.env
+
+# Ignore token files
+tokens.txt
